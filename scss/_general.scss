@@ -1,0 +1,180 @@
+/* General styles
+ ===================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $text;
+  font-size: 1.6rem;
+  color: $deep;
+  @media (max-width: $laptop-lg) {
+    font-size: 1.4rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: headingFont;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+ul,
+li {
+  list-style: none;
+}
+section {
+  padding: 5rem 0 7rem 0;
+}
+.container {
+  max-width: 1300px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  color: $deep;
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+
+  &--alt {
+    color: $dark;
+  }
+
+  @media (max-width: $laptop-xl) {
+    font-size: 1.4rem;
+  }
+}
+
+.btn {
+  border: 1px solid $accent;
+  border-radius: 8em;
+  font-family: $text;
+  font-size: 1.6rem;
+  padding: 1.2rem 2.5rem;
+  font-weight: 400;
+  color: $accent;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  @media (max-width: $tablet) {
+    font-size: 1.4rem;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  p {
+    margin-left: 0.7rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &--blue {
+    color: $secondary;
+    border: 1px solid $secondary;
+    text-transform: uppercase;
+  }
+  &--filled {
+    border: none;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #005ae9;
+    box-shadow: 0px 22px 44px -12px #005ae9;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
+.fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.input {
+  border: 1px solid $light-gray;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-family: $text;
+  width: 100%;
+
+  @media (max-width: $laptop-xl) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: $laptop-lg) {
+    font-size: 1.4rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+.icon-location:before {
+  content: "\1f56d";
+}
+.heading {
+  max-width: 920px;
+  background: url("../img/Rectangle-curved.png") no-repeat right;
+  background-size: cover;
+  padding: 1rem 3rem;
+  font-size: 3.2rem;
+  color: $white;
+  border-radius: 0.6rem;
+  line-height: 1.2;
+  @media (max-width: $tablet) {
+    font-size: 2.6rem;
+  }
+  @media (max-width: $mobile-lg) {
+    font-size: 2.2rem;
+  }
+  @media (max-width: $mobile) {
+    font-size: 1.8rem;
+  }
+  &--right {
+    background: url("../img/Rectangle-curved-right.png") no-repeat left;
+    text-align: right;
+    margin-left: auto;
+  }
+  &--outlined {
+    background: url("../img/Rectangle-curved-outlined.png") no-repeat left;
+    text-align: right;
+    margin-left: auto;
+    color: $secondary;
+    background-size: contain;
+  }
+}
+.heading__h4 {
+  font-family: $text;
+  font-size: 2.4rem;
+  color: $deep;
+  margin-bottom: 2rem;
+  @media (max-width: $tablet) {
+    font-size: 2rem;
+  }
+}
