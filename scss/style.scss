@@ -250,6 +250,9 @@
     top: 50%;
     left: 4rem;
     transform: translateY(-50%);
+    @media (max-width: $mobile) {
+      left: 0;
+    }
   }
   &__img {
     @media (max-width: $tablet-sm) {
